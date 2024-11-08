@@ -5,6 +5,8 @@ from PIL import Image
 import io
 import os
 
+
+
 app = Flask(__name__)
 
 # Chemin du dossier 'static/' pour stocker les images temporairement
