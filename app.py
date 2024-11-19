@@ -45,7 +45,7 @@ def upload_image():
             files = {'image': left_half_bytes}
 
             # Appel à l'API interne (mettez `/segment` si dans le même service)
-            response = requests.post('http://127.0.0.1:5000', files=files)
+            response = requests.post('https://officel-api-segmentation-v5.onrender.com//', files=files)
 
             if response.status_code != 200:
                 return render_template('index.html', error="Erreur de segmentation")
