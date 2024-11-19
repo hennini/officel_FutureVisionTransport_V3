@@ -77,6 +77,7 @@ def upload_image():
             left_half_bytes.seek(0)  # Remettre le pointeur au début pour la lecture
             files = {'image': left_half_bytes}
             response = requests.post('http://127.0.0.1:5000/segment', files=files)
+            #response = requests.post('/segment', files=files)
 
             # Vérifier que la réponse de l'API contient le masque
             if response.status_code != 200:
